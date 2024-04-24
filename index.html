@@ -19,30 +19,66 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        img {
-            max-width: 100%;
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .overlay {
+            position: relative;
+        }
+        .overlay img {
+            width: 100%;
+            display: block;
             border-radius: 5px;
+        }
+        .overlay .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .overlay:hover .text {
+            opacity: 1;
+        }
+        .content {
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>仲　晃平</h1>
-        <img src="your-photo.jpg" alt="田中太郎の写真">
-        <p>お酒大好き、食べること大好き、ディズニー大好きな仲 晃平です！</p>
-        <h2>連絡先情報</h2>
-        <ul>
-            <li>Email: example@example.com</li>
-            <li>電話: 0123-456-789</li>
-            <li>Twitter: <a href="https://twitter.com/example">@example</a></li>
-            <li>GitHub: <a href="https://github.com/example">example</a></li>
-        </ul>
-        <h2>趣味・興味</h2>
-        <ul>
-            <li>旅行</li>
-            <li>音楽鑑賞</li>
-            <li>料理</li>
-        </ul>
+        <div class="header">
+            <h1>田中 太郎</h1>
+            <p>Web開発者 | 旅行好き | 音楽愛好家</p>
+        </div>
+        <div class="overlay">
+            <img src="your-photo.jpg" alt="田中太郎の写真">
+            <div class="text">
+                <h2>自己紹介</h2>
+                <p>はじめまして！私は田中太郎です。Web開発者として働いています。HTML、CSS、JavaScriptを使って、クールで使いやすいWebサイトを作ることが大好きです。また、旅行、音楽、そして美味しい食べ物を楽しむことも大好きです。</p>
+                <p>お仕事のご依頼やご相談などがありましたら、お気軽にご連絡ください！</p>
+                <p>Email: example@example.com | Twitter: <a href="https://twitter.com/example">@example</a> | GitHub: <a href="https://github.com/example">example</a></p>
+            </div>
+        </div>
+        <div class="content">
+            <h2>趣味・興味</h2>
+            <ul>
+                <li>旅行</li>
+                <li>音楽鑑賞</li>
+                <li>料理</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
